@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray2"
+    android:orientation="vertical">
+
+
+    <com.jerei.im.ui.TemplateTitle
+        android:id="@+id/create_group_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        app:canBack="true"
+        app:titleText="@string/title_create_group" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+
+                android:background="@drawable/bg_item_add_friend"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/subtitle_create_group_name"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/input_group_name"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:hint="请输入群名称"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+
+                android:background="@drawable/bg_item_add_friend"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+
+                    android:text="@string/up_group_image"
+                    android:textColor="@color/text_gray2"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/group_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="@drawable/upimage"
+                    android:scaleType="centerCrop" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/text_gray1" />
+
+                <EditText
+                    android:id="@+id/input_group_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="16dp"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint="为群组写点简介吧，吸引更多成员加入"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/input_group_info_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="end"
+                    android:text="还可输入100字"
+                    android:textColor="@color/text_gray2"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btn_add_group_member"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg_positive_btn"
+                android:gravity="center"
+                android:text="@string/btn_add_member"
+                android:textColor="@color/text_btn" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

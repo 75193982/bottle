@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jerei.im.timchat">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <meta-data
+        android:name="com.tencent.rdm.uuid"
+        android:value="@string/tencent_key" />
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        >
+
+        <!-- <activity android:name=".ui.SplashActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- <activity android:name=".ui.HomeActivity" /> -->
+        \\
+        <activity android:name=".ui.FriendshipManageMessageActivity" />
+        <activity android:name=".ui.FriendshipHandleActivity" />
+        <activity
+            android:name=".ui.ProfileActivity"
+            android:theme="@style/IMAppTheme"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.EditActivity"
+            android:theme="@style/IMAppTheme"
+            />
+        <activity
+            android:name=".ui.ChatActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/IMAppTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.VideoActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.AddFriendActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.ImagePreviewActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.ImageViewActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.GroupManageMessageActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.GroupListActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.CreateGroupActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.ChooseFriendActivity"  android:theme="@style/IMAppTheme"/>
+        <activity
+            android:name=".ui.GroupProfileActivity"
+            android:launchMode="singleTask"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.ApplyGroupActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.GroupMemberActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.GroupMemberProfileActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.SystemManageMessageActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.SearchFriendActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.ManageFriendGroupActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.SearchGroupActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.MessageNotifySettingActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.BlackListActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.AboutActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.GroupHandleActivity"  android:theme="@style/IMAppTheme"/>
+
+        <activity
+            android:name=".ui.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMAppTheme"
+            />
+
+        <!-- 消息收发service -->
+        <service
+            android:name="com.tencent.qalsdk.service.QalService"
+            android:exported="false"
+            android:process=":QALSERVICE" />
+        <!-- 消息收发辅助service -->
+        <service
+            android:name="com.tencent.qalsdk.service.QalAssistService"
+            android:exported="false"
+            android:process=":QALSERVICE" />
+        <!-- 离线消息广播接收器 -->
+        <receiver
+            android:name="com.tencent.qalsdk.QALBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.tencent.qalsdk.broadcast.qal" />
+            </intent-filter>
+        </receiver>
+        <!-- 系统消息广播接收器 -->
+        <receiver
+            android:name="com.tencent.qalsdk.core.NetConnInfoCenter"
+            android:process=":QALSERVICE">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+
+
+
+        <activity android:name=".ui.ContactActivity"  android:theme="@style/IMAppTheme"/>
+        <activity android:name=".ui.MyAddFriendActivity"  android:theme="@style/IMAppTheme"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.jerei.im.timchat.ui.GroupListActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/background"
+        >
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:hint="群组名称"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:layout_margin="10dp"
+            android:drawablePadding="8dp"
+            android:paddingLeft="10dp"
+            android:maxLength="20"
+            android:background="@drawable/bg_search_contact"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            />
+
+    </FrameLayout>
+
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

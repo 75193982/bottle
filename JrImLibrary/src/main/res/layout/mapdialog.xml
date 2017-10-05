@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/baidulaylout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="32dp"
+
+        android:paddingRight="16dp">
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="百度地图"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/baidu"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="27dp"
+            android:gravity="center"
+            android:text="(下载)"
+            android:textColor="@color/btn_red" />
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/text_gray1"/>
+    <LinearLayout
+        android:id="@+id/gaodelaylout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="32dp"
+
+        android:paddingRight="16dp">
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="高德地图"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+
+
+        <TextView
+            android:id="@+id/gaode"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="27dp"
+            android:gravity="center"
+            android:text="(下载)"
+            android:textColor="@color/btn_red" />
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/text_gray1"/>
+    <LinearLayout
+        android:id="@+id/tencentlaylout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="32dp"
+
+        android:paddingRight="16dp">
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="腾讯地图"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+
+
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/text_gray1"/>
+
+
+
+
+</LinearLayout>

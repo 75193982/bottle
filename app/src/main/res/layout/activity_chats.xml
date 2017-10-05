@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#80ffffff"
+    android:id="@+id/l_rootView"
+
+    >
+    <ScrollView
+        android:background="#80ffffff"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:id="@+id/scrollView"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:id="@+id/l_rootView1"
+            android:layout_width="match_parent"
+            android:background="@color/bg_white"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffdfdb"
+                android:padding="15dp"
+                android:id="@+id/rl_head"
+                android:layout_margin="8dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/ll_m"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+                    <com.liji.circleimageview.CircleImageView
+                        android:src="@mipmap/timg"
+                        android:layout_marginRight="10dp"
+                        app:circle_border_color="#ffffff"
+                        app:circle_border_width="2dp"
+                        android:id="@+id/timg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/timg"
+                        android:layout_toEndOf="@+id/timg">
+                        <TextView
+                            android:layout_gravity="bottom"
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="一世微凉"
+                            android:textColor="#6d6d6d"
+                            android:layout_alignParentTop="true"
+                            android:textSize="15dp" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:background="@mipmap/meet_girl"
+                                android:layout_height="13dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:background="#0099FF"
+                                android:text="LV0"
+                                android:textSize="8dp"
+                                android:textColor="@color/bg_white"
+                                android:layout_marginLeft="3dp"
+                                android:paddingLeft="2dp"
+                                android:paddingRight="2dp"
+                                android:gravity="center"
+                                android:layout_height="13dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textColor="#9d9d9d"
+                            android:textSize="11dp"
+                            android:layout_alignParentRight="true"
+                            android:text="30分钟前"
+                            android:id="@+id/address"
+                            android:layout_height="wrap_content"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textColor="#9d9d9d"
+                            android:textSize="11dp"
+                            android:layout_marginTop="3dp"
+                            android:text="上海"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/address"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_marginTop="19dp"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/ll_m"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="有没有一起聊天的呀有没有一起聊天的呀有没起聊天的呀有没有一起聊天的呀有没起聊天的呀有没有一起聊天的呀有没起聊天的呀有没有一起聊天的呀有没有一有一起聊天的呀有没有一有一起聊天的呀的呀？"
+                        android:textSize="14dp"
+                        android:id="@+id/tv_message"
+                        android:textColor="#000000"
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="我就是爱小逗比"
+                        android:layout_below="@+id/tv_message"
+                        android:layout_marginTop="15dp"
+                        android:textSize="11dp"
+                        android:textColor="#CD8500"
+                        />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical"
+                android:background="@drawable/line_shape">
+
+                <EditText
+                    android:textSize="15dp"
+                    android:id="@+id/et_info"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="0.1dp"
+                    android:layout_marginLeft="0.1dp"
+                    android:layout_marginTop="0.1dp"
+                    android:background="@color/bg_white"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:gravity="top"
+                    android:layout_height="0dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/ib_speak"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/speak_selector" />
+
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/ib_face"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/ib_speak"
+                        android:background="@drawable/face_selector" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_onkey"
+                android:layout_margin="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#8d8d8d"
+                    android:textSize="15dp"
+                    android:text="扔进爱情海"
+                    android:id="@+id/tv_throw"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#e8a8a1"
+                        android:id="@+id/tv_pursuit"
+                        android:textSize="15dp"
+                        android:text="追求Ta"
+                        android:layout_marginRight="15dp"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#DCDCDC"
+                        android:textSize="15dp"
+                        android:text="发送"
+                        android:id="@+id/sendMessage"
+
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_marginTop="1dp"
+        android:id="@+id/fl_emoji"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/bg_white"
+        android:visibility="gone"
+
+        >
+
+        <com.bottle.com.bottle.utils.WrapContentViewPager
+            android:id="@+id/vp_emoji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+        <LinearLayout
+
+            android:layout_below="@+id/vp_emoji"
+            android:id="@+id/ll_point"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.jerei.im.timchat.ui.ContactActivity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.jerei.im.ui.TemplateTitle
+            android:id="@+id/contact_antionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:moreImg="@drawable/ic_add_more"
+            app:canBack="true"
+            />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+
+                android:id="@+id/radiobutton1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:button="@null"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@drawable/bg_radiobutton_contact_selector_acticle"
+                android:background="@drawable/bg_radiobutton_contact1"
+                android:text="好友"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/radiobutton2"
+                android:layout_marginLeft="-2px"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@drawable/bg_radiobutton_contact_selector_acticle"
+                android:background="@drawable/bg_radiobutton_contact2"
+                android:text="群组"></RadioButton>
+        </RadioGroup>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/id_fragment_title"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

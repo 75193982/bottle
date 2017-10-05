@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 连框颜色值 -->
+    <item>
+        <shape  xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="rectangle" >
+            <corners android:radius="8dp" />
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+    <!-- 主体背景颜色值 -->
+    <item android:bottom="1px"
+        android:top="1dp"
+        android:right="1dp"
+        android:left="1dp"
+        >
+        <!--边框里面背景颜色 白色-->
+        <shape  xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="rectangle" >
+            <corners android:radius="7dp" />
+            <solid android:color="@color/barBgColor" />
+        </shape>
+    </item>
+</layer-list>

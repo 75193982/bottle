@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_gray2"
+    tools:context="com.jerei.im.timchat.ui.ProfileActivity">
+
+    <com.jerei.im.ui.TemplateTitle
+        android:id="@+id/profile_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        app:canBack="true"
+        app:titleText="@string/profile_detail" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_top_green_expert"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="-1dp"
+        android:orientation="vertical">
+
+        <com.jerei.im.ui.CircleImageView
+            android:id="@+id/avatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/head_other" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textColor="@color/white"
+            android:text="heheh"
+            android:layout_margin="16dp"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <com.jerei.im.ui.LineControllerView
+        android:visibility="gone"
+        android:id="@+id/id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:linecontrollerview_name="@string/profile_id"/>
+    <com.jerei.im.ui.LineControllerView
+        android:layout_marginTop="10dp"
+        android:id="@+id/remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:canNav="true"
+
+        app:linecontrollerview_name="@string/profile_remark"/>
+    <com.jerei.im.ui.LineControllerView
+        android:visibility="gone"
+        android:id="@+id/blackList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isSwitch="true"
+        app:linecontrollerview_name="@string/profile_black"/>
+    <com.jerei.im.ui.LineControllerView
+        android:id="@+id/group"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:canNav="true"
+        app:isBottom="true"
+        android:onClick="onClick"
+        app:linecontrollerview_name="@string/profile_now_group"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/area"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="山东省 济宁市"
+            android:textColor="@color/text_gray1"
+            android:layout_marginLeft="20dp"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            />
+
+        <Button
+            android:id="@+id/typeName"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/orange"
+            android:background="@drawable/profile_btn"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:text="专家"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/btnDel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_negative_btn"
+            android:textColor="@color/text_btn"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:text="@string/profile_del"/>
+        <TextView
+            android:id="@+id/btnChat"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_positive_btn"
+            android:textColor="@color/text_btn"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="@string/profile_chat"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

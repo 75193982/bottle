@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical"
+    tools:context="com.jerei.im.timchat.ui.GroupProfileActivity">
+
+    <com.jerei.im.ui.TemplateTitle
+        android:id="@+id/chat_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:canBack="true"
+        app:titleText="@string/chat_setting_group_member" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.jerei.im.ui.MyGridView
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:horizontalSpacing="0px"
+                android:numColumns="4"
+                android:paddingLeft="6dp"
+                android:paddingRight="3dp"
+                android:paddingTop="10dp"
+                android:verticalSpacing="0px" />
+
+            <com.jerei.im.ui.LineControllerView
+                android:id="@+id/idText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                app:linecontrollerview_name="@string/chat_setting_group_id" />
+
+            <com.jerei.im.ui.LineControllerView
+                android:id="@+id/member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:linecontrollerview_name="全部群成员" />
+
+            <com.jerei.im.ui.LineControllerView
+                android:id="@+id/nameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:linecontrollerview_name="@string/chat_setting_group_name" />
+
+            <com.jerei.im.ui.LineControllerView
+                android:id="@+id/groupIntro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:linecontrollerview_name="@string/chat_setting_group_introduce" />
+
+            <com.jerei.im.ui.LineControllerView
+                android:id="@+id/qr_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:canNav="true"
+                app:linecontrollerview_name="群二维码" />
+
+            <com.jerei.im.ui.LineControllerView
+                android:id="@+id/messageNotify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:canNav="true"
+                app:linecontrollerview_name="@string/chat_setting_group_msg_alert" />
+
+            <com.jerei.im.ui.LineControllerView
+                android:id="@+id/nickName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:canNav="true"
+                app:linecontrollerview_name="群内昵称" />
+
+            <com.jerei.im.ui.LineControllerView
+                android:id="@+id/addOpt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:isBottom="true"
+                app:linecontrollerview_name="@string/chat_setting_group_add_opt" />
+
+            <LinearLayout
+                android:id="@+id/controlInGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/btnDel"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_negative_btn"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:textColor="@color/text_btn"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/btnChat"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_positive_btn"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:text="@string/profile_chat"
+                    android:textColor="@color/text_btn"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/controlOutGroup"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_positive_btn"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/chat_setting_add"
+                android:textColor="@color/text_btn"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
